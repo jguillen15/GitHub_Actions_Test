@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
 
       - name: Run the actions_test python script
-        run: python actions_test.py 12
+        run: python calculate_complexity_scores.py --username 'jfgm' --password 'CompuIDT1598@' --ClientID '1598' --ClientSecret 'babd134e-fc99-4a84-8e8c-719e9125d5d1' 'Test_file_Complexity_Scores.nt' 'OUTPUT'
         
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
