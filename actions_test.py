@@ -10,7 +10,7 @@ def main():
     if number_retrieved > 10:
         print("Oops!")
         exit()
-        print("This should not be printed")
+        #print("This should not be printed")
     else:
         print("All good :)")
 
