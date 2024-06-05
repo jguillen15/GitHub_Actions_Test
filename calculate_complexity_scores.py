@@ -20,7 +20,7 @@ from sbol_utilities.workarounds import type_to_standard_extension
 COMPLEXITY_SCORE_NAMESPACE = 'http://igem.org/IDT_complexity_score'
 REPORT_ACTIVITY_TYPE = 'https://github.com/SynBioDex/SBOL-utilities/compute-sequence-complexity'
 
-#Disable certificate verification
+#Disable certificate verification 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 class IDTAccountAccessor:
