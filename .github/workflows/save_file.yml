@@ -1,0 +1,28 @@
+# This is a basic workflow to save a file in my repo from a runner
+
+name: Push File to Repository
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GH_TOKEN }}  # Using the secret token
+
+    - name: Create a file
+      run: echo "This is a test file" > testfile.txt
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add testfile.txt
+        git commit -m "Add test file"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Using the secret token
